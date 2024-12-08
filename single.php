@@ -1,6 +1,7 @@
  <?php 
-
- // silence is golden...
+/*  
+* Template: Single Post
+*/
 get_header();?>
 
 <?php get_template_part('template-parts/nav'); ?>

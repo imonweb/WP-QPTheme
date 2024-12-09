@@ -16,6 +16,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
  
+.page-numbers {
+  display: inline-block;
+  padding: 10px;
+  border: solid thin #ddd;
+  text-decoration: none;
+}
 
  

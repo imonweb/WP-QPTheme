@@ -27,4 +27,52 @@ img {
   text-decoration: none;
 }
 
- 
+.custom-logo {
+  /* max-width: 100px; */
+  max-width: 100px;
+  /* max-height: 40px;  */
+  max-height: 27px; 
+}
+
+/*  Nav Menu */
+
+/*
+#menu-main-nav-menu .sub-menu {
+  position: absolute;
+  top: 30px;
+  left: 0px; 
+  display: none;
+}
+
+#menu-main-nav-menu li {
+  padding: 4px ;
+  border: solid thin #aaa;
+  list-style: none;
+  background-color: #eee;
+  border-left: #eee;
+}
+
+#menu-main-nav-menu li:hover > a {
+  color: #fff;
+}
+
+#menu-main-nav-menu li:hover {
+  background-color: #aaa;
+}
+
+#menu-main-nav-menu li:hover .sub-menu {
+  display: block;
+}
+
+#menu-main-nav-menu a {
+  text-decoration: none;
+}
+
+#menu-main-nav-menu {
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+*/
+
+

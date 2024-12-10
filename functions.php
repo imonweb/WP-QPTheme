@@ -3,7 +3,7 @@
 add_action('init', function(){
   if(!is_admin()){
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css?', array(), '5.3.3', 'all' );
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css?asdf=sjhg', array(), '1.0.0', 'all' );
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css?asdf=sdfs', array(), '1.0.0', 'all' );
 
     wp_enqueue_script('customjs', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
 
@@ -34,6 +34,42 @@ add_action('init', function(){
    );
 
 });  
+
+/*
+================================================
+   Sidebar 
+================================================
+*/
+
+function qp_sidebar() {
+	register_sidebar( array(
+		'name'          => 'Primary Sidebar',
+		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Footer Sidebar1',
+		'id'            => 'footer-sidebar-1',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+  register_sidebar( array(
+		'name'          => 'Footer Sidebar2',
+		'id'            => 'footer-sidebar-2',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+}
+
+add_action('widgets_init', 'qp_sidebar');
+
  
 add_action( 'after_setup_theme', function () {
 	$defaults = array(

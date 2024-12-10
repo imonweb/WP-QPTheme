@@ -3,7 +3,7 @@
 add_action('init', function(){
   if(!is_admin()){
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css?', array(), '5.3.3', 'all' );
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css?asdf=sdf', array(), '1.0.0', 'all' );
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css?asdf=sjhg', array(), '1.0.0', 'all' );
 
     wp_enqueue_script('customjs', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
 
@@ -54,3 +54,7 @@ add_action( 'after_setup_theme', function () {
 */
 
 require get_template_directory() . '/template-parts/walker.php';
+
+// echo '<pre';
+// print_r(new header_menu_walker());
+// echo '</pre>';

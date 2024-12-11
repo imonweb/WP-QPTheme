@@ -21,6 +21,7 @@ add_action('init', function(){
 // 
 
   // add_image_size('post-preview', 367,300, true);
+  add_image_size('post-preview-small', 100, 100, true);
   add_image_size('post-preview', 367,366, true);
   add_image_size('post-single', 315,366, true);
 
@@ -94,3 +95,12 @@ require get_template_directory() . '/template-parts/walker.php';
 // echo '<pre';
 // print_r(new header_menu_walker());
 // echo '</pre>';
+
+/*
+================================================
+   Widgets 
+================================================
+*/
+require get_template_directory() . '/template-parts/widgets.php';
+
+// $my_widget = new Recent_posts_widget();

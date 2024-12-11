@@ -12,7 +12,7 @@ get_header();?>
 <div class="container-fluid">
   <div class="row">
     <!-- <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 text-center"> -->
-    <div class="col p-4 card-group justify-content-center">
+    <div class="col p-4 card-group justify-content-center" style="align-items: flex-start;">
  
     <?php 
       if(have_posts()) :
@@ -31,6 +31,7 @@ get_header();?>
   </div>
  </div>
  </div>
+ 
       <?php get_template_part('template-parts/pagination'); ?>
   
 

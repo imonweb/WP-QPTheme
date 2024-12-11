@@ -4,6 +4,7 @@
 get_header();?>
 
 <?php get_template_part('template-parts/nav'); ?>
+<?php  echo get_theme_mod('setting_id', ''); ?>
 <?php
  if(is_home()){
    get_template_part('template-parts/slider'); 
@@ -13,7 +14,8 @@ get_header();?>
   <div class="row">
     <!-- <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 text-center"> -->
     <div class="col p-4 card-group justify-content-center" style="align-items: flex-start;">
- 
+    
+   
     <?php 
       if(have_posts()) :
         while(have_posts()) :

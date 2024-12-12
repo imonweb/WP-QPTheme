@@ -120,7 +120,7 @@ function qp_customize_register( $wp_customize ) {
   'theme_supports' => '', // Rarely needed.
 ) );
 
-  $wp_customize->add_setting( 'setting_id', array(
+  $wp_customize->add_setting( 'qp_slider_image_1', array(
   'type' => 'theme_mod', // or 'option'
   'capability' => 'edit_theme_options',
   'default' => '',
@@ -128,6 +128,22 @@ function qp_customize_register( $wp_customize ) {
   'sanitize_callback' => 'sanitize_text_field',
 ) );
 
+$wp_customizer->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customizer,
+			'demo_image_settings',
+			array(
+				'label'      => __( 'Upload a File', 'Text Domain' ),
+				'section'    => 'customizer section name',
+				'height'=>100, // cropper Height
+				'width'=>100, // Cropper Width
+				'flex_width'=>true, //Flexible Width
+				'flex_height'=>true, // Flexible Heiht
+			)
+		)
+	);
+
+/*
   $wp_customize->add_control( 'setting_id', array(
   'type' => 'text',
   'section' => 'qp_slider_settings', // Required, core or custom.
@@ -139,6 +155,7 @@ function qp_customize_register( $wp_customize ) {
     'placeholder' => __( 'mm/dd/yyyy' ),
   ) 
 ) );
+*/
  
 }
 add_action( 'customize_register', 'qp_customize_register' );

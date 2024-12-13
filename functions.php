@@ -111,8 +111,8 @@ require get_template_directory() . '/template-parts/widgets.php';
 ================================================
 */
 
-function qp_customize_register( $wp_customize ) {
-   $wp_customize->add_section( 'qp_slider_settings', array(
+function qp_customize_register( $wp_customizer ) {
+   $wp_customizer->add_section( 'qp_slider_settings', array(
   'title' => __( 'Slider Image Settings' ),
   'description' => __( 'Edit slider image settings' ),
   'priority' => 160,
@@ -120,7 +120,7 @@ function qp_customize_register( $wp_customize ) {
   'theme_supports' => '', // Rarely needed.
 ) );
 
-  $wp_customize->add_setting( 'qp_slider_image_1', array(
+  $wp_customizer->add_setting( 'qp_slider_image_1', array(
   'type' => 'theme_mod', // or 'option'
   'capability' => 'edit_theme_options',
   'default' => '',
@@ -131,31 +131,17 @@ function qp_customize_register( $wp_customize ) {
 $wp_customizer->add_control(
 		new WP_Customize_Cropped_Image_Control(
 			$wp_customizer,
-			'demo_image_settings',
+			'qp_slider_image_1',
 			array(
-				'label'      => __( 'Upload a File', 'Text Domain' ),
-				'section'    => 'customizer section name',
-				'height'=>100, // cropper Height
-				'width'=>100, // Cropper Width
-				'flex_width'=>true, //Flexible Width
-				'flex_height'=>true, // Flexible Heiht
+				'label'      => __( 'Slider Image 1' ),
+				'section'    => 'qp_slider_settings',
+				'height'=>200, // cropper Height
+				'width'=>1000, // Cropper Width
+				'flex_width'=>false, //Flexible Width
+				'flex_height'=>false, // Flexible Heiht
 			)
 		)
 	);
-
-/*
-  $wp_customize->add_control( 'setting_id', array(
-  'type' => 'text',
-  'section' => 'qp_slider_settings', // Required, core or custom.
-  'label' => __( 'Some text' ),
-  'description' => __( 'This is a date control with a red border.' ),
-  'input_attrs' => array(
-    'class' => 'my-custom-class-for-js',
-    'style' => 'border: 1px solid #900',
-    'placeholder' => __( 'mm/dd/yyyy' ),
-  ) 
-) );
-*/
  
 }
 add_action( 'customize_register', 'qp_customize_register' );

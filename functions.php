@@ -112,6 +112,7 @@ require get_template_directory() . '/template-parts/widgets.php';
 */
 
 function qp_customize_register( $wp_customizer ) {
+  //  image slider section
    $wp_customizer->add_section( 'qp_slider_settings', array(
   'title' => __( 'Slider Image Settings' ),
   'description' => __( 'Edit slider image settings' ),
@@ -120,6 +121,7 @@ function qp_customize_register( $wp_customizer ) {
   'theme_supports' => '', // Rarely needed.
 ) );
 
+  // slier image 1
   $wp_customizer->add_setting( 'qp_slider_image_1', array(
   'type' => 'theme_mod', // or 'option'
   'capability' => 'edit_theme_options',

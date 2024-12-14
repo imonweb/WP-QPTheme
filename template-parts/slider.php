@@ -13,7 +13,7 @@
           $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_1',''));
         }
       ?>
-      <img src="<?= get_template_directory_uri() . '/images/slider1-1000x200.jpg'; ?>"   class="d-block w-100" alt="...">
+      <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>

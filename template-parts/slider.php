@@ -1,3 +1,9 @@
+<?php 
+  $slider_activate = get_theme_mod('qp_slider_activate', 1);
+?>
+
+<?php if ($slider_activate) : ?>
+
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -8,7 +14,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <?php 
-        $image = get_template_directory_uri() . './images/banner2.jpg';
+        $image = get_template_directory_uri() . './images/slider1-1000x200.jpg';
         if(get_theme_mod('qp_slider_image_1','') != ""){
           $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_1',''));
         }
@@ -20,21 +26,39 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= get_template_directory_uri() . '/images/slider2-1000x200.jpg'; ?>" class="d-block w-100" alt="...">
+      <?php 
+        $image = get_template_directory_uri() . './images/slider2-1000x200.jpg';
+        if(get_theme_mod('qp_slider_image_2','') != ""){
+          $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_2',''));
+        }
+      ?>
+      <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= get_template_directory_uri() . '/images/slider3-1000x200.jpg'; ?>" class="d-block w-100" alt="...">
+      <?php 
+        $image = get_template_directory_uri() . './images/slider3-1000x200.jpg';
+        if(get_theme_mod('qp_slider_image_3','') != ""){
+          $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_3',''));
+        }
+      ?>
+      <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= get_template_directory_uri() . '/images/slider4-1000x200.jpg'; ?>" class="d-block w-100" alt="...">
+      <?php 
+        $image = get_template_directory_uri() . './images/slider4-1000x200.jpg';
+        if(get_theme_mod('qp_slider_image_4','') != ""){
+          $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_4',''));
+        }
+      ?>
+      <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Fourth slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
@@ -51,3 +75,4 @@
   </button>
 </div>
 
+<?php endif; ?>

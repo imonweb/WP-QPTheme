@@ -113,24 +113,46 @@ require get_template_directory() . '/template-parts/widgets.php';
 
 function qp_customize_register( $wp_customizer ) {
   //  image slider section
-   $wp_customizer->add_section( 'qp_slider_settings', array(
-  'title' => __( 'Slider Image Settings' ),
-  'description' => __( 'Edit slider image settings' ),
-  'priority' => 160,
-  'capability' => 'edit_theme_options',
-  'theme_supports' => '', // Rarely needed.
-) );
+  $wp_customizer->add_section( 'qp_slider_settings', array(
+		'title' => __( 'Slider Image Settings' ),
+		'description' => __( 'Edit slider image settings' ),
+		'priority' => 160,
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '', // Rarely needed.
+	) );
 
-  // slier image 1
-  $wp_customizer->add_setting( 'qp_slider_image_1', array(
-  'type' => 'theme_mod', // or 'option'
-  'capability' => 'edit_theme_options',
-  'default' => '',
-  'transport' => 'refresh', // or postMessage
-  'sanitize_callback' => 'sanitize_text_field',
-) );
+	// activate slider settings
+	$wp_customizer->add_setting( 'qp_slider_activate', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '1',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
 
-$wp_customizer->add_control(
+	$wp_customizer->add_control('qp_slider_activate',
+		array(
+			'type' => 'checkbox',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Activate Image Slider' ),
+			'description' => __( 'Activate or deactivate the front page image slider'),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+			),
+		)
+	);
+
+	// slider image 1
+	$wp_customizer->add_setting( 'qp_slider_image_1', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_control(
 		new WP_Customize_Cropped_Image_Control(
 			$wp_customizer,
 			'qp_slider_image_1',
@@ -144,6 +166,78 @@ $wp_customizer->add_control(
 			)
 		)
 	);
- 
+
+	// slider image 2
+	$wp_customizer->add_setting( 'qp_slider_image_2', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customizer,
+			'qp_slider_image_2',
+			array(
+				'label'      => __( 'Slider Image 2' ),
+				'section'    => 'qp_slider_settings',
+				'height'=>200, // cropper Height
+				'width'=>1000, // Cropper Width
+				'flex_width'=>false, //Flexible Width
+				'flex_height'=>false, // Flexible Heiht
+			)
+		)
+	);
+
+	// slider image 3
+	$wp_customizer->add_setting( 'qp_slider_image_3', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customizer,
+			'qp_slider_image_3',
+			array(
+				'label'      => __( 'Slider Image 3' ),
+				'section'    => 'qp_slider_settings',
+				'height'=>200, // cropper Height
+				'width'=>1000, // Cropper Width
+				'flex_width'=>false, //Flexible Width
+				'flex_height'=>false, // Flexible Heiht
+			)
+		)
+	);
+
+	// slider image 4
+	$wp_customizer->add_setting( 'qp_slider_image_4', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customizer,
+			'qp_slider_image_4',
+			array(
+				'label'      => __( 'Slider Image 4' ),
+				'section'    => 'qp_slider_settings',
+				'height'=>200, // cropper Height
+				'width'=>1000, // Cropper Width
+				'flex_width'=>false, //Flexible Width
+				'flex_height'=>false, // Flexible Heiht
+			)
+		)
+	);
+
 }
 add_action( 'customize_register', 'qp_customize_register' );

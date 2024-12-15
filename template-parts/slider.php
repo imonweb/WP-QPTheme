@@ -19,10 +19,17 @@
           $image = wp_get_attachment_url(get_theme_mod('qp_slider_image_1',''));
         }
       ?>
+      <?php // print_r($wp_query); ?>
       <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <?php 
+          
+          $slider_header_text = get_theme_mod('qp_slider_header_text_1','');
+          $slider_content_text = get_theme_mod('qp_slider_content_text_1','');
+          
+        ?>
+        <h5><?= $slider_header_text; ?></h5>
+        <p><?= $slider_content_text; ?></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -34,8 +41,14 @@
       ?>
       <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+         <?php 
+          
+          $slider_header_text = get_theme_mod('qp_slider_header_text_2','');
+          $slider_content_text = get_theme_mod('qp_slider_content_text_2','');
+          
+        ?>
+        <h5><?= $slider_header_text; ?></h5>
+        <p><?= $slider_content_text; ?></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -47,8 +60,14 @@
       ?>
       <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+         <?php 
+          
+          $slider_header_text = get_theme_mod('qp_slider_header_text_3','');
+          $slider_content_text = get_theme_mod('qp_slider_content_text_3','');
+          
+        ?>
+        <h5><?= $slider_header_text; ?></h5>
+        <p><?= $slider_content_text; ?></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -60,8 +79,14 @@
       ?>
       <img src="<?= $image; ?>"   class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Fourth slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+         <?php 
+          
+          $slider_header_text = get_theme_mod('qp_slider_header_text_4','');
+          $slider_content_text = get_theme_mod('qp_slider_content_text_4','');
+          
+        ?>
+        <h5><?= $slider_header_text; ?></h5>
+        <p><?= $slider_content_text; ?></p>
       </div>
     </div>
   </div>

@@ -143,6 +143,75 @@ function qp_customize_register( $wp_customizer ) {
 		)
 	);
 
+	// slider text settings
+	//#1
+	$wp_customizer->add_setting( 'qp_slider_header_text_1', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => 'First slide label',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_setting( 'qp_slider_content_text_1', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => 'Some representative placeholder content for the first slide',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	//#2
+	$wp_customizer->add_setting( 'qp_slider_header_text_2', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_setting( 'qp_slider_content_text_2', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	//#3
+	$wp_customizer->add_setting( 'qp_slider_header_text_3', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_setting( 'qp_slider_content_text_3', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	//#4
+	$wp_customizer->add_setting( 'qp_slider_header_text_4', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customizer->add_setting( 'qp_slider_content_text_4', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
 	// slider image 1
 	$wp_customizer->add_setting( 'qp_slider_image_1', array(
 		'type' => 'theme_mod', // or 'option'
@@ -164,6 +233,34 @@ function qp_customize_register( $wp_customizer ) {
 				'flex_width'=>false, //Flexible Width
 				'flex_height'=>false, // Flexible Heiht
 			)
+		)
+	);
+
+	// header text 1
+	$wp_customizer->add_control('qp_slider_header_text_1',
+		array(
+			'type' => 'text',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 1 Header Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 1 Header Text' ),
+			),
+		)
+	);
+
+	// content text 1
+	$wp_customizer->add_control('qp_slider_content_text_1',
+		array(
+			'type' => 'textarea',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 1 Content Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 1 Content Text' ),
+			),
 		)
 	);
 
@@ -191,6 +288,34 @@ function qp_customize_register( $wp_customizer ) {
 		)
 	);
 
+	// header text 2
+	$wp_customizer->add_control('qp_slider_header_text_2',
+		array(
+			'type' => 'text',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 2 Header Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 2 Header Text' ),
+			),
+		)
+	);
+
+	// content text 2
+	$wp_customizer->add_control('qp_slider_content_text_2',
+		array(
+			'type' => 'textarea',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 2 Content Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 2 Content Text' ),
+			),
+		)
+	);
+
 	// slider image 3
 	$wp_customizer->add_setting( 'qp_slider_image_3', array(
 		'type' => 'theme_mod', // or 'option'
@@ -215,6 +340,34 @@ function qp_customize_register( $wp_customizer ) {
 		)
 	);
 
+	// header text 3
+	$wp_customizer->add_control('qp_slider_header_text_3',
+		array(
+			'type' => 'text',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 3 Header Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 3 Header Text' ),
+			),
+		)
+	);
+
+	// content text 3
+	$wp_customizer->add_control('qp_slider_content_text_3',
+		array(
+			'type' => 'textarea',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 3 Content Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 3 Content Text' ),
+			),
+		)
+	);
+
 	// slider image 4
 	$wp_customizer->add_setting( 'qp_slider_image_4', array(
 		'type' => 'theme_mod', // or 'option'
@@ -236,6 +389,34 @@ function qp_customize_register( $wp_customizer ) {
 				'flex_width'=>false, //Flexible Width
 				'flex_height'=>false, // Flexible Heiht
 			)
+		)
+	);
+
+	// header text 4
+	$wp_customizer->add_control('qp_slider_header_text_4',
+		array(
+			'type' => 'text',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 4 Header Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 4 Header Text' ),
+			),
+		)
+	);
+
+	// content text 4
+	$wp_customizer->add_control('qp_slider_content_text_4',
+		array(
+			'type' => 'textarea',
+			'section' => 'qp_slider_settings',
+			'label'      => __( 'Image 4 Content Text' ),
+			'input_attrs'    => array(
+				'class' => 'my-custom-class-for-json',
+				'style' => '',
+				'placeholder' =>	__( 'Image 4 Content Text' ),
+			),
 		)
 	);
 
